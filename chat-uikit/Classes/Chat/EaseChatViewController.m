@@ -1432,9 +1432,9 @@
 
 - (void)setupInputMenu:(EaseInputMenu *)inputbar
 {
-    if (!inputbar) {
+    //if (!inputbar) {
         _inputBar = inputbar;
-    }
+    //}
 }
 
 //Send input state

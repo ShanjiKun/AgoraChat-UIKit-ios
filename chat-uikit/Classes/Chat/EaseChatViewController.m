@@ -1434,6 +1434,7 @@
 {
     //if (!inputbar) {
         _inputBar = inputbar;
+        _inputBar.delegate = self;
     //}
 }
 

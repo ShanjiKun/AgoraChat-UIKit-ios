@@ -215,6 +215,9 @@
                     if ([model.message.from isEqualToString:weakself.currentConversation.conversationId]) {
                         model.userDataProfile = weakself.sentProfile;
                     }
+                    if (weakself.myProfile && [model.message.from isEqualToString:weakself.myProfile.easeId]) {
+                        model.userDataProfile = weakself.myProfile;
+                    }
                 }
             }
             
@@ -1255,6 +1258,9 @@
                 }
                 if ([model.message.from isEqualToString:self.currentConversation.conversationId]) {
                     model.userDataProfile = self.sentProfile;
+                }
+                if (self.myProfile && [model.message.from isEqualToString:self.myProfile.easeId]) {
+                    model.userDataProfile = self.myProfile;
                 }
             } else {
                 if (self.delegate && [self.delegate respondsToSelector:@selector(userProfile:)]) {
